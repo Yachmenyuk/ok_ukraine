@@ -1,0 +1,624 @@
+
+
+@font-face {
+    font-family: 'Georgia-Regular';
+    src: url('fonts/georgia_regular/Georgia-Regular.eot');
+    src: url('fonts/georgia_regular/Georgia-Regular.eot?#iefix') format('embedded-opentype'),
+         url('fonts/georgia_regular/Georgia-Regular.woff') format('woff'),
+         url('fonts/georgia_regular/Georgia-Regular.ttf') format('truetype'),
+         url('fonts/georgia_regular/Georgia-Regular.svg#Georgia-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lucida-Sans-Unicode-Regular';
+    src: url('fonts/lucida_sans_unicode_regular/Lucida-Sans-Unicode-Regular.eot');
+    src: url('fonts/lucida_sans_unicode_regular/Lucida-Sans-Unicode-Regular.eot?#iefix') format('embedded-opentype'),
+         url('fonts/lucida_sans_unicode_regular/Lucida-Sans-Unicode-Regular.woff') format('woff'),
+         url('fonts/lucida_sans_unicode_regular/Lucida-Sans-Unicode-Regular.ttf') format('truetype'),
+         url('fonts/lucida_sans_unicode_regular/Lucida-Sans-Unicode-Regular.svg#Lucida-Sans-Unicode-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+	
+}
+
+html, body {
+	 height: 100%;
+	 width: 100%
+}
+body {
+	margin: 0;
+    padding: 0;
+    font-family: 'Georgia-Regular';
+    color: #282828;
+    font-size: 0;
+    font-weight: normal;
+}
+
+a {
+	text-decoration: none;
+	color: #282828;
+}
+
+.container {
+	width: 85vw;
+	margin: 0 auto;
+	font-size: 0;
+	overflow: hidden;
+}
+
+nav {
+	background-color: (255,255,255,1);
+	height: 7vw;
+	overflow: hidden;
+}
+
+
+nav .logo {
+	width: 9.3vw;
+	display: inline-block;
+	line-height: 7vw;
+	vertical-align: middle;
+	margin-right: 3.8vw;
+}
+nav ul {
+	text-decoration: none;
+	display: inline-block;
+	line-height: 7vw;
+	vertical-align: middle;
+	font-size:0;
+	
+}
+nav li {
+	display: inline-block;
+	line-height: 1.2vw;
+	padding: 0.8vw;
+	margin-right: 0.2vw;
+	font-size: 1.26vw;
+}
+
+nav li.active {
+	outline: 0.1vw solid #f1d04a;
+}
+
+.shedule_icon {
+	vertical-align: middle;
+	width: 2.3vw;
+	margin: 0 0.4vw 0 2vw;
+}
+.working_shedule {
+	font-family: 'Lucida-Sans-Unicode-Regular';
+	line-height: 1vw;
+	vertical-align: middle;
+} 
+
+.working_shedule li{
+	display: block;
+	line-height: 0.8vw;
+	padding: 0.3vw;
+	font-size: 0.98vw;
+}
+
+nav .icon {
+	width: 1.4vw;
+	vertical-align: middle;
+	margin-right: 1vw;
+}
+
+/*CAROUSEL*/
+#wrapper {
+	
+	height: 30vw;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	
+}
+#carousel {
+	/* background-color: #f8d90c; */
+	
+	height: 30vw;
+	overflow: hidden;
+}
+#carousel img {
+	
+	height: 30vw;
+ /*  -webkit-filter: contrast(1) saturate(110%);
+  -moz-filter: contrast(1) saturate(110%);
+   -ms-filter: contrast(1) saturate(110%);
+    -o-filter: contrast(1) saturate(110%);
+       filter: contrast(1) saturate(110%);
+ 	opacity: 0.8; */
+	display: block;
+	
+}
+
+.ok_ukraine {
+	font-family: 'Georgia-Regular';
+	width: 100%;
+	position: absolute;
+	z-index: 91;
+	text-align: center;
+	top: 8vw;
+	
+}
+.ok_ukraine h1 {
+	font-size: 3vw;
+	/* color: #e8db77; */
+	color: #f2cc33;
+	text-transform: uppercase;
+	text-shadow: 0 0 1.5vw rgba(0,0,0,0.8);
+}
+.ok_ukraine h2 {
+	padding-top: 1vw;
+	padding-bottom: 6vw;
+	font-size: 2vw;
+	color: #fffffe;
+	font-weight: normal;
+	text-shadow: 0 0 0.6vw #a7a7a7;
+}
+button {
+	border:none;
+	font-size: 0.98vw;
+	color: #fffffe;
+	background-color: #f2cc33;
+	padding: 0.5vw 2.5vw;
+	cursor: pointer;
+	font-family: 'Georgia-Regular';
+}
+button:focus {
+	outline: none;
+}
+button:hover {
+	opacity: 0.8;
+}
+
+button a {
+	color: #fefefe;
+}
+ 
+#pager {
+	position: absolute;
+	padding: 0;
+	top: 25vw;
+	left: 45.4vw;
+	z-index: 90;
+}
+#pager a {
+	background-color: rgba(45,45,45,0.6);
+	display: inline-block;
+	width: 1.8vw;
+	height: 1.8vw;
+	margin-right: 0.7vw;
+	border-radius: 50%;
+	
+}
+#pager a.selected {
+	width: 1.9vw;
+	height: 1.9vw;
+	background-color: #2d2d2d;
+	border: 0.15vw solid #dfdfdf;
+}
+#pager a span {
+	display: none;
+}
+ 
+#thumbs {
+	display: none;
+	width: 10.5vw;
+	height: 5.25vw;
+	padding: 1.5vw;
+	position: absolute;
+	top: 21vw;
+	left: 56vw;
+	z-index: 10;
+	
+}
+
+
+.caroufredsel_wrapper {
+	/* background-color: #f8d90c; */
+}
+
+#thumbs img {
+	border:0;
+	width: 10.5vw;
+	height: 5.25vw;
+	/* opacity: 0.7; */
+	display: block;
+/* 	float: left;
+ -webkit-filter: contrast(1.2) saturate(150%);
+   		-moz-filter: contrast(1.2) saturate(150%);
+    		-ms-filter: contrast(1.2) saturate(150%);
+    		 -o-filter: contrast(1.2) saturate(150%);
+      			  filter: contrast(1.2) saturate(150%); */
+}
+
+/*About Company*/
+
+
+.about_company h1 {
+	font-size: 2vw;
+	text-align: center;
+	font-weight: normal;
+	padding: 6vw 0 2vw 0;
+	border-bottom: 0.2vw solid #f2cc33;
+
+}
+.about {
+	display: inline-block;
+	width: 42.5vw;
+	font-size: 0.98vw;
+	line-height: 1.5vw;
+	vertical-align: top;
+	color: #505050;
+}
+
+.about p {
+	font-family: 'Lucida-Sans-Unicode-Regular';
+	padding-top: 1.5vw;
+}
+.unvisible {
+	display: none;
+}
+
+.about button {
+	margin-top: 2vw;
+}
+
+#hidden_show_more {
+	padding-right: 4vw;
+	padding-left: 4vw;
+	
+	position: relative;
+	
+	display: none;
+}
+.partners {
+	display: inline-block;
+	width: 42.5vw;
+}
+
+.partners h3 {
+	font-size: 2vw;
+	font-weight: normal;
+	text-align: center;
+	padding: 1.5vw 0 3vw 0;
+}
+
+.partner_logo {
+	display: inline-block;
+}
+.first_partner {
+	background: url("img/partners_logo/grandstroy.jpg") center/cover no-repeat;
+	width: 13vw;
+	height:10vw;
+	margin-left: 7vw;
+}
+.second_partner {
+	background: url("img/partners_logo/hi_raise.jpg") center/cover no-repeat;
+	width: 8vw;
+	height:11vw;
+	margin-left: 6vw;
+}
+/*OBJECTS*/
+.all_objects {
+	max-width: 100%;
+	overflow: hidden;
+	position: relative;
+	font-size: 0;
+
+}
+.all_objects h4 {
+	font-size: 2vw;
+	text-align: center;
+	font-weight: normal;
+	padding: 3vw 0 6vw 0;
+}
+#svg_select_object {
+	z-index: -99;
+	position: absolute;
+	width: 200vw;
+	height: 32vw;
+	left:-62.2vw;
+	top: 5.8vw;
+}
+
+.box_object {
+	width: 16.75vw;
+	height: 20vw;
+	margin-left: 6vw;
+	display: inline-block;
+	font-size: 1.2vw;
+	text-align: center;
+	
+}
+
+.box_object h5 {
+	/* font-weight: normal; */
+	font-size: 1.2vw;
+	line-height: 3.55vw;
+}
+.left_box {
+	margin-left: 0;
+}
+.object {
+	height: 16.45vw;
+}
+
+#first_object {
+	background: url(img/objects/select/1.jpg) center/cover no-repeat;
+}
+#second_object {
+	background: url(img/objects/select/2.jpg) center/cover no-repeat;
+}
+#third_object {
+	background: url(img/objects/select/3.jpg) center/cover no-repeat;
+}
+#fourth_object {
+	background: url(img/objects/select/4.jpg) center/cover no-repeat;
+}
+
+/*Description Objects with gallery*/
+.object_description {
+	position: relative;
+	height: 28vw;
+	margin-top: 3vw;
+}
+
+.first_objects_description {
+	position: absolute;
+	z-index: 1;
+	opacity: 0;
+	
+}
+.second_objects_description {
+	position: absolute;
+	z-index: 4;
+	opacity: 1;
+}
+.third_objects_description {
+	position: absolute;
+	z-index: 3;
+	opacity: 0;
+}
+.fourth_objects_description {
+	position: absolute;
+	z-index: 2;
+	opacity: 0;
+}
+
+.description {
+	background-color: #fff;
+}
+
+.description article {
+	width: 42.5vw;
+	font-size: 0.98vw;
+	line-height: 1.7vw;
+	font-family: 'Lucida-Sans-Unicode-Regular';
+	padding-bottom: 2vw;
+	padding-right: 1.5vw;
+	display: inline-block;
+	vertical-align: top;
+	color: #505050;
+}
+
+.description button {
+	padding: 0.5vw 1.6vw;
+	color: #282828;
+
+}
+
+.gallery_object {
+	display: inline-block;
+	height: 21vw;
+	width: 42.5vw;
+}
+
+.big_photo {
+	display: inline-block;
+	width: 31.8vw;
+	height: 21vw;
+}
+
+#big_photo_1 {
+	background: url(img/objects/marshal_city/1.jpg) left/cover no-repeat;
+}
+
+#big_photo_2 {
+	background: url(img/objects/akademgorodok_sovinyon/1.jpg) left/cover no-repeat;
+}
+
+#big_photo_3 {
+	background: url(img/objects/levanevskiy/1.jpg) left/cover no-repeat;
+}
+#big_photo_4 {
+	background: url(img/objects/akademgorodok/1.jpg) left/cover no-repeat;
+}
+
+.small_photo_box {
+	display: inline-block;
+	width: 10.4vw;
+	height: 21vw;
+	margin-left: 0.3vw;
+}
+
+
+.small_photo {
+	width: 100%;
+	height: 6.8vw;
+	margin-bottom: 0.3vw;
+}
+.active_photo {
+	border: 0.2vw solid #f2cc33;
+}
+#small_photo_top_1 {
+	background: url(img/objects/marshal_city/1.jpg) left/cover no-repeat;
+}
+#small_photo_middle_1 {
+	background: url(img/objects/marshal_city/2.jpg) left/cover no-repeat;
+}
+#small_photo_bottom_1 {
+	background: url(img/objects/marshal_city/3.jpg) left/cover no-repeat;
+}
+#small_photo_top_2 {
+	background: url(img/objects/akademgorodok_sovinyon/1.jpg) left/cover no-repeat;
+}
+#small_photo_middle_2 {
+	background: url(img/objects/akademgorodok_sovinyon/2.jpg) left/cover no-repeat;
+}
+#small_photo_bottom_2 {
+	background: url(img/objects/akademgorodok_sovinyon/3.jpg) left/cover no-repeat;
+}
+#small_photo_top_3 {
+	background: url(img/objects/levanevskiy/1.jpg) left/cover no-repeat;
+}
+#small_photo_middle_3 {
+	background: url(img/objects/levanevskiy/2.jpg) left/cover no-repeat;
+}
+#small_photo_bottom_3 {
+	background: url(img/objects/levanevskiy/3.jpg) left/cover no-repeat;
+}
+#small_photo_top_4 {
+	background: url(img/objects/akademgorodok/1.jpg) left/cover no-repeat;
+}
+#small_photo_middle_4 {
+	background: url(img/objects/akademgorodok/2.jpg) left/cover no-repeat;
+}
+#small_photo_bottom_4 {
+	background: url(img/objects/akademgorodok/3.jpg) left/cover no-repeat;
+}
+
+/*Hot SALES*/
+
+#hot_sales h1 {
+	font-size: 2vw;
+	text-align: center;
+	font-weight: normal;
+	padding: 0vw 0 2vw 0;
+	border-bottom: 0.2vw solid #f2cc33;
+
+}
+
+#hot_sales {
+	position: relative;
+	height: 42vw;
+}
+#img_hot_sales {
+	width: 42.5vw;
+	height: 33vw;
+	background: url("img/hot_sales/1.jpg") left/cover no-repeat;
+	display: inline-block;
+}
+
+#left_side {
+	font-size: 2vw;
+	width: 42.5vw;
+	height: 35vw;
+	display: inline-block;
+	vertical-align: top;
+}
+#hot_sales h6 {
+	padding-top: 2vw;
+	padding-bottom: 4vw;
+	font-family: 'Lucida-Sans-Unicode-Regular';
+	font-weight: normal;
+	font-size: 1.5vw;
+	color: #505050;
+
+}
+
+#flat {
+	padding: 1vw 2vw 0 0;
+}
+#hot_sales p {
+	color: #f2cc33;
+	font-family: 'Georgia-Regular';
+	line-height: 3vw;
+}
+
+#cost, #summ_flat {
+	color: #373737;
+}
+.ye {
+	color: #898989;
+	font-size: 1.6vw;
+}
+
+.arrow_hot {
+	position: absolute;
+	width: 2.5vw;
+	padding: 0;
+	height:4.5vw;
+	top: 20vw;
+}
+#back_hot {
+	left:2vw;
+	background: url(img/hot_sales/arrow_left.png) center/cover no-repeat;
+}
+
+#forward_hot {
+	left:94.5vw;
+	background: url(img/hot_sales/arrow_right.png) center/cover no-repeat;	
+}
+
+
+/*Location*/
+.location {
+	height: 26vw;
+
+}
+
+/* .closer_google_map {
+	height: 60px;
+	background-color: #fff;
+	position: absolute;
+	z-index: 500;
+	width: 100%;
+	top: 5vw;
+} */
+
+.location h1 {
+	font-size: 2vw;
+	text-align: center;
+	font-weight: normal;
+	padding: 0vw 0 0 0;
+	/* border-bottom: 0.2vw solid #f2cc33; */
+	margin-bottom: 1.5vw;
+
+}
+.google_map {
+	position: relative;
+	width: 100%;
+	height: 27vw;
+}
+footer {
+	display: block;
+	margin-top:5vw;
+	background-color: #0f1518;
+	color: #fff;
+}
+.nav_footer a{
+	font-weight: normal;
+	color: #fff;
+}
+
+
+
+/*MEDIA*/
+@media all and (max-width: 436px) {
+
+		
+	}
+	

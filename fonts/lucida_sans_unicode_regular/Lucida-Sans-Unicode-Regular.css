@@ -1,0 +1,11 @@
+/** Created by TTF.in.ua **/
+@font-face {
+    font-family: 'Lucida-Sans-Unicode-Regular';
+    src: url('Lucida-Sans-Unicode-Regular.eot');
+    src: url('Lucida-Sans-Unicode-Regular.eot?#iefix') format('embedded-opentype'),
+         url('Lucida-Sans-Unicode-Regular.woff') format('woff'),
+         url('Lucida-Sans-Unicode-Regular.ttf') format('truetype'),
+         url('Lucida-Sans-Unicode-Regular.svg#Lucida-Sans-Unicode-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
