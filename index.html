@@ -62,17 +62,21 @@
 		<div class="about_company" id="company">
 			<h1>O компании</h1>
 			<div class="container">
-				<article class="about">
+				<div class="about">
+					<article class="text-about show-more">
 					<p>Строительная компания ОК «Украина» организована группой профессионалов, имеющих большой опыт строительства в Одессе и Одесской области. Основным направлением деятельности является осуществление проектов по строительству и продаже жилой коммерческой недвижимости для одесситов и людей желающих купить квартиру в Одессе.</p>
 					<p>Утвердившись на рынке недвижимости Одессы наша строительная компания подтверждает свою отличную репутацию многими объектами, одними из которых является ЖК "Академгородок-Совиньон" ЖК"Академгородок", ЖК"Акапулько-2", ЖК "Леваневский.</p>
 					<p>В настоящий момент мы приступили к строительству нового уникального объекта недвижимости в Одессе - жилого комплекса "Маршал-Сити", Таирово. Мы как всегда прогнозируем высокий темп строительства, благодаря опыту в строительстве подобных объектов.</p>
-					<div class="unvisible">
+					<!-- <div class="unvisible"> -->
 						<p>Миссия нашей компании быть надежной, добропорядочной компанией для людей, строящей качественные и запоминающиеся проекты, удовлетворяющие все разнообразие предпочтений покупателей.</p>
 						<p>Цель деятельности: прежде всего выполнение обязательств перед своими клиентами и партнерами. Именно такой подход обеспечивает нашей компании устойчивое развитие, позволяя непрерывно наращивать объемы строительства, и подтверждать репутацию ответственной и прогрессивной компании, стабильно работающей на рынке недвижимости.</p>
-					</div>
-					<button id=show_more>Подробнее...</button>
-					<button id=hidden_show_more>Скрыть</button>
+					<!-- </div> -->
+					
+				<!-- 	<button id=hidden_show_more>Скрыть</button> -->
 				</article>
+				<input type="button" id="about-button-more" value="Подробнее..."> 
+				</div>
+				
 				<section class="partners">
 					<h3>Партнеры</h3>
 					<div class="partner_logo first_partner"></div>
@@ -80,7 +84,7 @@
 				</section>
 			</div>
 		</div>
-		<div id="objects" class="all_objects">
+		<div class="all_objects">
 			<div id="svg_select_object">
 				<svg viewbox="0 0 200 26.5" viewport="0 0 200 26.5">
 					<polyline stroke="#f2cc33" stroke-width="0.011vw" fill="none" points=" 0,25.5 91.2,25.5 91.2,5 100,3 109.3,5 109.3,25.5 200,25.5"/>
@@ -88,14 +92,17 @@
 			</div>
 			<div class="container">
 				<h4>Наши объекты</h4>
-				<div class="box_object left_box"><div id="first_object" class="object"></div><h5>Маршал-Сити</h5></div>
-				<div class="box_object"><div id="second_object" class="object"></div><h5>Академгородок-Совиньон</h5></div>
-				<div class="box_object"><div id="third_object" class="object"></div><h5>Леваневский</h5></div>
-				<div class="box_object"><div id="fourth_object" class="object"></div><h5>Академгородок</h5></div>
+				<div id="objects">
+					<div class="box_object left_box" id="dsf"><div id="first_object" class="object"></div><h5>Маршал-Сити</h5></div>
+					<div class="box_object" id="dsfg"><div id="second_object" class="object"></div><h5>Академгородок-Совиньон</h5></div>
+					<div class="box_object" id="pa"><div id="third_object" class="object"></div><h5>Леваневский</h5></div>
+					<div class="box_object" id="per"><div id="fourth_object" class="object"></div><h5>Академгородок</h5></div>
+				</div>
 				
-				<div class="object_description">
+				
+				<div id="object_description">
 					<!--111-->
-					<div class="first_objects_description description">
+					<div class="description">
 						<article>
 							Жилой комплекс "Маршал-Сити". Таирово - идеальное место для тех, кто привык к лучшему. Расположенный в экологически чистом районе города, комплекс строится с заботой о комфорте и безопасности каждого будущего жителя. Уникальная собственная инфраструктура и красивая благоустроенная придомовая территория в сочетании с эргономичными планировками квартир и комплексной безопасностью обеспечивают настоящий домашний уют, которого порой так не хватает. «Маршал Сити» - это место, где забываешь городскую суету, не покидая при этом пределов города.
 						</article>
@@ -111,7 +118,7 @@
 						<button><a href="http://marshal-city.com.ua/" target="_blank">Перейти на сайт</a></button>
 					</div>
 					<!--222-->
-					<div class="second_objects_description description">
+					<div class="description active-object">
 						<article>
 							Жилой Комплекс "Академгородок-Совиньон", пгт.Таирово.  представляет собой привлекательный малоэтажный жилой комплекс в элитном районе города Одессы вблизи моря, он расположился в Совиньоне, Черноморка. Это гармоничное сочетание удобства городской квартиры и преимущества жизни на природе. Чистый воздух, отсутствие городской суеты не оставит никого равнодушным. Индивидуальное газовое отопление в каждой квартире, закрытая охраняемая территория, игровые детские площадки, подземный паркинг, супермаркет, общественно-торговый центр обеспечит комфортное проживание жителей данного комплекса. Возможность свободной планировки на этапе строительства, позволит сделать вам двухуровневую квартиру или совместить несколько на одном этаже, что придаст индивидуальность вашему жилью.
 						</article>
@@ -127,7 +134,7 @@
 						<button><a href="http://akademgorodok-sovinyon.com.ua/" target="_blank">Перейти на сайт</a></button>
 					</div>
 						<!--333-->
-					<div class="third_objects_description description">
+					<div class="description">
 						<article>
 							ЖК "Леваневский"-изюминка от строительной компании. Малоэтажный комплекс возле аркадии. Комплекс сдан. Квартиры все проданы. В наличии есть нежилые помещения.
 						</article>
@@ -143,7 +150,7 @@
 						<button><a href="http://levanevskiy.com.ua/" target="_blank">Перейти на сайт</a></button>
 					</div>
 					<!--444-->
-					<div class="fourth_objects_description description">
+					<div class="description">
 						<article>
 							ЖК "Академгородок" один из лучших проектов. Малоэтажный комплекс, охраняемая территория в приморском районе. Дом сдан, все квартиры проданы.
 						</article>
@@ -208,6 +215,8 @@
 		</footer>
 	</body>	
 	<script type="text/javascript" src="js/jquery-2.2.1.js"></script>
-	<script type="text/javascript" src="js/jquery.carouFredSel-6.2.1-packed.js"></script>
+	<script type="text/javascript" src="js/carousel/jquery.carouFredSel-6.2.1-packed.js"></script>
+	<script type="text/javascript" src="js/carousel/carousel.js"></script>
+	<script type="text/javascript" src="js/gallery_objects.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 </html>

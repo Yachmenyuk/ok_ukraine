@@ -166,7 +166,7 @@ nav .icon {
 	font-weight: normal;
 	text-shadow: 0 0 0.6vw #a7a7a7;
 }
-button {
+button, #about-button-more {
 	border:none;
 	font-size: 0.98vw;
 	color: #fffffe;
@@ -175,7 +175,7 @@ button {
 	cursor: pointer;
 	font-family: 'Georgia-Regular';
 }
-button:focus {
+button:focus, #about-button-more:focus {
 	outline: none;
 }
 button:hover {
@@ -233,14 +233,7 @@ button a {
 	border:0;
 	width: 10.5vw;
 	height: 5.25vw;
-	/* opacity: 0.7; */
 	display: block;
-/* 	float: left;
- -webkit-filter: contrast(1.2) saturate(150%);
-   		-moz-filter: contrast(1.2) saturate(150%);
-    		-ms-filter: contrast(1.2) saturate(150%);
-    		 -o-filter: contrast(1.2) saturate(150%);
-      			  filter: contrast(1.2) saturate(150%); */
 }
 
 /*About Company*/
@@ -263,6 +256,18 @@ button a {
 	color: #505050;
 }
 
+.text-about {
+	display: block; /* or inline-block */
+	line-height: 3vh;
+}
+
+.show-more {
+	text-overflow: ellipsis;
+	word-wrap: break-word;
+	overflow: hidden;
+	max-height: 46vh;
+}
+
 .about p {
 	font-family: 'Lucida-Sans-Unicode-Regular';
 	padding-top: 1.5vw;
@@ -271,18 +276,13 @@ button a {
 	display: none;
 }
 
-.about button {
+#about-button-more {
+	padding-right: 4vw;
+	padding-left: 4vw;
+	position: relative;
 	margin-top: 2vw;
 }
 
-#hidden_show_more {
-	padding-right: 4vw;
-	padding-left: 4vw;
-	
-	position: relative;
-	
-	display: none;
-}
 .partners {
 	display: inline-block;
 	width: 42.5vw;
@@ -329,8 +329,9 @@ button a {
 	position: absolute;
 	width: 200vw;
 	height: 32vw;
-	left:-62.2vw;
+	right: -38.9vw; /*39 22,71 16.19*/
 	top: 5.8vw;
+	transition: 1s;
 }
 
 .box_object {
@@ -369,36 +370,17 @@ button a {
 }
 
 /*Description Objects with gallery*/
-.object_description {
+#object_description {
 	position: relative;
 	height: 28vw;
 	margin-top: 3vw;
 }
 
-.first_objects_description {
-	position: absolute;
-	z-index: 1;
-	opacity: 0;
-	
-}
-.second_objects_description {
-	position: absolute;
-	z-index: 4;
-	opacity: 1;
-}
-.third_objects_description {
-	position: absolute;
-	z-index: 3;
-	opacity: 0;
-}
-.fourth_objects_description {
-	position: absolute;
-	z-index: 2;
-	opacity: 0;
-}
-
 .description {
 	background-color: #fff;
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
 }
 
 .description article {
@@ -419,16 +401,28 @@ button a {
 
 }
 
+.active-object {
+	z-index: 1;
+	opacity: 1;
+	transition: 1s;
+}
+
+
 .gallery_object {
 	display: inline-block;
 	height: 21vw;
 	width: 42.5vw;
+	-webkit-transition: background 1s ease; /* Safari and Chrome */
+    -moz-transition: background 1s ease; /* Firefox 4 */
+    -o-transition: background 1s ease; /* Opera */
+    transition: background 1s ease;
 }
 
 .big_photo {
 	display: inline-block;
 	width: 31.8vw;
 	height: 21vw;
+    transition: background 1s ease;
 }
 
 #big_photo_1 {
