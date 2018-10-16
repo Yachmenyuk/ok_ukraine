@@ -1,5 +1,5 @@
 /*Carousel*/
-$(document).ready(function() {
+$(window).load(function() {
 	var thumbs = $('#thumbscarousel');
  
 	$('#carousel').carouFredSel({
